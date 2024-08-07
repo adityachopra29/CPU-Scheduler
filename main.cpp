@@ -107,7 +107,7 @@ void roundRobin(int originalQuantum)
     for(int time =0;time<last_instant;time++){
         if(!q.empty()){
             int processIndex = q.front().first;
-            q.front().second = q.front().second-1;
+            q.front().second--;
             int remainingServiceTime = q.front().second;
             int arrivalTime = getArrivalTime(processes[processIndex]);
             int serviceTime = getServiceTime(processes[processIndex]);
